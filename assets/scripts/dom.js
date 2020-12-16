@@ -3,16 +3,14 @@ new Vue({
     el: '#app',
 
     data: {
-    
         titulo: 'Usando Vue JS!',
-
         linkGoogle: 'https://www.google.com'
     },
 
     methods: {
-
         alteraTexto(event) {
             this.titulo = event.target.value
+            
         },
         
         saudacao() {
@@ -20,6 +18,7 @@ new Vue({
         },
 
         acessaTitulo() {
+            this.titulo = 'Título alterado, para ilustrar que a diretiva "v-once" não irá afetar o título original'
             return this.titulo
         }
     }
@@ -30,6 +29,9 @@ console.log(teste1)
 
 let teste2 = document.querySelector('#teste2')
 console.log(teste2)
+
+let edu_bind = document.querySelector('[edu-bind]')
+console.log(edu_bind)
 
 
 
