@@ -41,17 +41,17 @@
 
 									<!-- 1) Preencha a tag <p> abaixo com o nome e idade, usando interpolação -->
 									<p>
-										Usando VueJS - {{ nome }} ({{ idade }})
+										Usando VueJS - <span class="text-warning">{{ nome }}</span> <span class="text-warning">({{ idade }})</span>
 									</p>
 
 									<!-- 2) Exiba a idade multiplicada por 7 -->
 									<p>
-										Minha idade x 7 é: {{ idade * 7 }}
+										Minha idade x 7 é: <span class="text-primary">{{ idade * 7 }}</span>
 									</p>
 
 									<!-- 3) Chamar uma função para exibir um número randômico entre 0 e 1 (Math.random()) -->
 									<p>
-										Número aleatório entre 1 e 10: <b>{{ numeroAleatorio() }}</b>
+										Número aleatório entre 1 e 10: <b class="text-danger">{{ numeroAleatorio() }}</b>
 									</p>
 
 									<!-- 4) Procure uma imagem no google e exiba na tag img fazendo um binding no atributo "src"-->
