@@ -21,6 +21,10 @@ new Vue ({
             return Math.round(
                 Math.random() * (this.max - this.min) + this.min
                 )
+        },
+
+        idadeVezes3() {
+            return this.idade * 3
         }
         
     }
