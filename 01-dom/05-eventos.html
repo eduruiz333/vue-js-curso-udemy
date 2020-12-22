@@ -41,8 +41,9 @@
 									<!-- EXERCÍCIO EVENTOS - 02 - CHAMANDO UMA FUNÇÃO PASSANDO UM EVENTO, NO CASO, O MOUSEMOVE -->
 									<p class="border p-3 mb-5" v-on:mousemove="atualizarXY">
 										Posição do mouse em:
-										<br> EIXO X: <span class="text-warning">{{ x }}</span> 
-										<br> EIXO Y: <span class="text-warning">{{ y }}</span>
+										<br> EIXO X: <span class="text-warning d-inline-block">{{ x }}</span> 
+										<br> EIXO Y: <span class="text-warning d-inline-block mb-3">{{ y }}</span>
+										<span class="d-block border p-4" v-on:mousemove.stop>AQUI O EVENTO DE MOUSE SERÁ PARADO (stop propagation)</span>
 									</p>
 
 									<!-- EXERCÍCIO EVENTOS - 03 - CHAMANDO FUNÇÃO PASSANDO PARÂMETRO PERSONALIZADO E TAMBÉM UM EVENTO ($event) -->
@@ -51,6 +52,14 @@
 									</p>
 									<button class="btn btn-outline-light mb-5" v-on:click="somar5($event)">Somar {{ cinco }}</button> 
 									<!-- Aqui, o $event é uma palavra reservada para designar o evento, quando a função já está recebendo algum outro parâmetro -->
+
+									<!-- PARAR PROPAGAÇÃO DE EVENTO, OU PREVENIR EVENTO DEFAULE -->
+									<p>
+										<a class="text-danger" v-on:click.prevent href="https://www.google.com" target="_blank">GUUUGOU (link com preventDefault para evitar o evento default)</a>
+									</p>
+									<p>
+										<a class="text-danger" v-on:click="naoNavegar" href="https://www.google.com" target="_blank">GUUUGOU (link com preventDefault para evitar o evento default)</a>
+									</p>
                                 </div>
 							</div>
 						</div>
