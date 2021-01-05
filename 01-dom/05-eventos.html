@@ -55,11 +55,13 @@
 
 									<!-- PARAR PROPAGAÇÃO DE EVENTO, OU PREVENIR EVENTO DEFAULE -->
 									<p>
-										<a class="text-danger" v-on:click.prevent href="https://www.google.com" target="_blank">GUUUGOU (link com preventDefault para evitar o evento default)</a>
+										<a class="text-danger" v-on:click.prevent href="https://www.google.com" target="_blank">GUUUGOU (link com preventDefault por diretiva para evitar o evento default)</a>
 									</p>
 									<p>
-										<a class="text-danger" v-on:click="naoNavegar" href="https://www.google.com" target="_blank">GUUUGOU (link com preventDefault para evitar o evento default)</a>
+										<a class="text-danger" v-on:click="naoNavegar" href="https://www.google.com" target="_blank">GUUUGOU (link com preventDefault por função para evitar o evento default)</a>
 									</p>
+									<hr>
+									<input type="text" v-on:keyup.enter.alt="exibirAlerta" placeholder="pressione Enter + alt">
                                 </div>
 							</div>
 						</div>

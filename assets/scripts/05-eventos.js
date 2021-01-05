@@ -31,6 +31,10 @@ new Vue({
         naoNavegar(ev) { 
             // neste caso o ev é o evento (event) pq não tem nenhum outro evento personalizado decladado, se houvesse precisaria ser $event
             ev.preventDefault()
+        },
+
+        exibirAlerta() {
+            alert('Este é um alerta para ficar alerta!')
         }
     }
 })
