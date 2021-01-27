@@ -34,8 +34,13 @@
                                     </div>
                                     <div class="demo" :class="{'cor-3' : aplicarCor3}" @click="aplicarCor3 = !aplicarCor3">
                                         click me
-                                    </div>
+									</div>
+									<div class="demo" :class="classeCSS">
+										click me
+									</div>
                                 </div>
+								<hr>
+								<input type="text" v-model="classeCSS">
 							</div>
 						</div>
 					</section>
