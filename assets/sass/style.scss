@@ -56,3 +56,27 @@
     // padding-left: 40px;
     text-align: center;
   }
+
+  hr {
+    display: block !important;
+    width: 100% !important;
+    height: 2px !important;
+    background-color: cyan !important;
+
+  }
+
+
+  .coma {
+    margin-right: 10px;
+
+    &::after {
+      content: ',';
+      display: inline-block;
+      height: 5px;
+      width: 5px;
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
