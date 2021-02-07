@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+	<meta name="keywords" content="Vue JS">
+	<meta name="description" content="Curso de Vue JS">
+	<meta name="author" content="Eduardo Ruiz">
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<title>Curso de Vue JS</title>
+</head>
+
+<body>
+
+	<!--CONTEÚDO PRINCIPAL-->
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<section>
+						<div class="row">
+							<div class="col">
+								<div id="desafio" class="">
+									<!-- 1) Ligue o botão para alternar a exibição dos dois parágrafos. Usar v-if e v-show, inspecionar os elementos para ver as diferenças -->
+                                    <h2>#01</h2>
+                                    <div>
+                                        <button class="btn btn-primary mb-4" @click="[verP1 = !verP1, verP2 = !verP2]">Alternar</button>
+                                        <p v-show="verP1">PARÁGRAFO COM V-SHOW</p>
+                                        <p v-show="verP1">OU EU...</p>
+                                        <p v-if="verP2">PARÁGRAFO COM V-IF</p>
+                                        <p v-if="verP2">OU EU...</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <h2>SOLUÇÃO DO PROFESSOR</h2>
+                                    <div>
+                                        <button class="btn btn-primary mb-4" @click="expressao = !expressao">Alternar</button>
+                                        <p v-if="expressao">PARÁGRAFO COM V-IF</p>
+                                        <p v-else>OU EU COM V-IF...</p>
+                                        <p v-show="expressao">PARÁGRAFO COM V-SHOW</p>
+                                        <p v-show="!expressao">OU EU COM V-SHOW...</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- 2_) Exiba em uma <ul> um array de elementos da sua escolha. Renderizar também o índice. -->
+                                    <h2>#02</h2>
+                                    <ul>
+                                        <li v-for="(artista, i) in artista"> {{ artista }} - {{ i +1 }} </li>
+                                    </ul>
+
+                                    <hr>
+
+                                    <!-- Imprimir todos os pares de chave-valor do objeto livro, também o índice -->
+                                    <h2>#03</h2>
+                                    <ul>
+                                        <li v-for="(valor, chave) in livros">
+                                            {{ chave }} : {{ valor }} <br>
+                                        </li>
+                                    </ul>
+
+                                    <hr>
+
+                                    <!-- Imprimir do objeto aluno somente os valores, e criar um loop aninhado para o array. Dica: use v-for e v-if para a solução -->
+                                    <h2>#04</h2>
+                                    <ul>
+                                        <li v-for="valor in aluno">
+
+                                            <template v-if="!Array.isArray(valor)">
+                                                {{ valor }}
+                                            </template>
+
+                                            <template v-else>
+                                                    Notas: 
+                                                    <ul>
+                                                        <li v-for="nota in valor">
+                                                            {{ nota }}
+                                                        </li>
+                                                    </ul>
+                                            </template>
+                                        </li>
+                                    </ul>
+
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!--/CONTEÚDO PRINCIPAL-->
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="../assets/scripts/03-desafio.js"></script>
+</body>
+
+</html>
