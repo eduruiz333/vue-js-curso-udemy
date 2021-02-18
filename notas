@@ -1,0 +1,8 @@
+Para instalar o vue cli em modo global:
+sudo npm i -g @vue/cli
+
+Para criar um projeto dentro do vue cli:
+vue create nome-do-projeto
+
+Para instalar pluguins num projeto:
+vue add nome-do-plugin
